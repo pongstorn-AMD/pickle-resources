@@ -9,7 +9,8 @@ sudo apt install -y qemu-kvm
 sudo apt install -y libvirt-daemon
 sudo apt install -y bridge-utils
 
-sudo addgroup libvirtdsudo adduser ubuntu libvirtd
+sudo addgroup libvirtd
+sudo adduser ubuntu libvirtd
 
 git clone https://github.com/pongstorn-AMD/pickle-resources.git
 
