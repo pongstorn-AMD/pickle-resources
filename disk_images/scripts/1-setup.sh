@@ -1,13 +1,16 @@
 #!/bin/bash
 
-rm packer_1.12.0_linux_arm64.zip
-rm packer
-rm LICENSE.txt
-wget https://releases.hashicorp.com/packer/1.12.0/packer_1.12.0_linux_arm64.zip
-unzip packer_1.12.0_linux_arm64.zip
+#rm packer_1.12.0_linux_arm64.zip
+#rm packer
+#rm LICENSE.txt
+#wget https://releases.hashicorp.com/packer/1.12.0/packer_1.12.0_linux_arm64.zip
+#unzip packer_1.12.0_linux_arm64.zip
 
 rm noble-server-cloudimg-arm64.img
-wget https://cloud-images.ubuntu.com/noble/20250403/noble-server-cloudimg-arm64.img
+#wget https://cloud-images.ubuntu.com/noble/20250403/noble-server-cloudimg-arm64.img
+wget https://cloud-images.ubuntu.com/noble/20251206/noble-server-cloudimg-arm64.img
+#wget http://cloud-images-archive.ubuntu.com/releases/noble/release-20250403/ubuntu-24.04-server-cloudimg-arm64.img
+#mv ubuntu-24.04-server-cloudimg-arm64.img noble-server-cloudimg-arm64.img
 qemu-img convert noble-server-cloudimg-arm64.img -O raw ./arm64.img.v2
 qemu-img resize -f raw arm64.img.v2 +20G
 
