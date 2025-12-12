@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd $HOME
-version=6.6.71
+version=6.8
 rm -rf linux-${version}.*
 rm -rf linux_src
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-${version}.tar.xz
