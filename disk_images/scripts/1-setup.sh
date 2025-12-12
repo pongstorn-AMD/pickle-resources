@@ -8,9 +8,9 @@
 
 rm noble-server-cloudimg-arm64.img
 #wget https://cloud-images.ubuntu.com/noble/20250403/noble-server-cloudimg-arm64.img
-wget https://cloud-images.ubuntu.com/noble/20251206/noble-server-cloudimg-arm64.img
-#wget http://cloud-images-archive.ubuntu.com/releases/noble/release-20250403/ubuntu-24.04-server-cloudimg-arm64.img
-#mv ubuntu-24.04-server-cloudimg-arm64.img noble-server-cloudimg-arm64.img
+#wget https://cloud-images.ubuntu.com/noble/20251206/noble-server-cloudimg-arm64.img
+wget http://cloud-images-archive.ubuntu.com/releases/noble/release-20250403/ubuntu-24.04-server-cloudimg-arm64.img
+mv ubuntu-24.04-server-cloudimg-arm64.img noble-server-cloudimg-arm64.img
 qemu-img convert noble-server-cloudimg-arm64.img -O raw ./arm64.img.v2
 qemu-img resize -f raw arm64.img.v2 +20G
 
